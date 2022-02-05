@@ -19,7 +19,7 @@ PyQt Comic Viewer
 * Being able to invert the color to prevent the eye strain
 
 ## Note
-I still test open compressed file feature so it won't work. Open normal file, directory is working and so far i don't find any problems at those two. There's a couple of other things that won't work properly like recent feature and setting background color or <b>being not support the image files which don't include any digits in their name. This is very first version of application and i will improve it.
+I still test open compressed file feature so it won't work. Open normal file, directory is working and so far i don't find any problems at those two. There's a couple of other things that won't work properly like recent feature and setting background color or <b>being not support the image files which don't include any digits in their name</b>. This is very first version of application and i will improve it.
 
 ## Example
 Code Sample
