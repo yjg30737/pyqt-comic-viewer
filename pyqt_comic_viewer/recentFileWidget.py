@@ -16,8 +16,6 @@ class RecentFileWidget(QWidget):
         if parent: self.setStyleSheet(parent.styleSheet())
 
         self.__saveWidget = QListWidget()
-        self.__saveWidget.addItem('짱 25')
-        self.__saveWidget.addItem('도박묵시록 카이지 27')
         self.__saveWidget.itemDoubleClicked.connect(self.__openRecentFile)
         self.__saveWidget.setStyleSheet('QListWidget { border: none; }')
 

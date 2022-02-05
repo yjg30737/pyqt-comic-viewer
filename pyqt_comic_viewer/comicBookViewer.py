@@ -244,10 +244,3 @@ class ComicBookViewer(QMainWindow):
             self.showFullScreen()
         else:
             self.showNormal()
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    comicBookViewer = ComicBookViewer()
-    comicBookViewer.show()
-    app.exec_()
