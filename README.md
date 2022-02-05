@@ -13,8 +13,13 @@ PyQt Comic Viewer
 * <a href="https://github.com/yjg30737/pyqt-viewer-widget.git">pyqt-viewer-widget</a> - Parent class 
 * <a href="https://github.com/yjg30737/python-open-filepath-and-select.git">python-open-filepath-and-select</a>
 
+## Feature
+* Way to flip the page is as same as pyqt-viewer-widget which has mentioned before.
+* Being able to open the directory which current file belongs to
+* Being able to invert the color to prevent the eye strain
+
 ## Note
-I still test open compressed file feature so it won't work. Open normal file, directory is working and so far i don't find any problems at those two.
+I still test open compressed file feature so it won't work. Open normal file, directory is working and so far i don't find any problems at those two. There's a couple of other things that won't work properly like recent feature and setting background color or <b>being not support the image files which don't include any digits in their name. This is very first version of application and i will improve it.
 
 ## Example
 Code Sample
