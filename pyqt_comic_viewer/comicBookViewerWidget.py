@@ -22,7 +22,6 @@ class ComicBookViewerWidget(ViewerWidget):
     def __initUi(self):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__prepare_menu)
-        PyQtResourceHelper.setStyleSheet([self], ['style/text_button.css'])
 
     def __prepare_menu(self, pos):
         menu = QMenu(self)

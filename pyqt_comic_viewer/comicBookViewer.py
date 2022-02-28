@@ -57,8 +57,6 @@ class ComicBookViewer(QMainWindow):
 
         self.__comicBookViewerWidget.setBottomWidgetVisible(False)
 
-        PyQtResourceHelper.setStyleSheet([self], ['style/dark_gray_theme.css'])
-
     def __backgroundColorSettings(self):
         color = QColorDialog.getColor()
         self.__comicBookViewerWidget.setStyleSheet("QGraphicsView { background: "+color.name() + "}")

@@ -1,3 +1,4 @@
+git+https://git@github.com/yjg30737/pyqt-dark-gray-theme.git@main
 git+https://git@github.com/yjg30737/pyqt-toast.git@main
 git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main
 git+https://git@github.com/yjg30737/pyqt-viewer-widget.git@main

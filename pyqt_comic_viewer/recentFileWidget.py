@@ -25,7 +25,6 @@ class RecentFileWidget(QWidget):
         self.__closeBtn.setMaximumSize(24, 24)
 
         PyQtResourceHelper.setIcon([self.__closeBtn], ['ico/close.png'])
-        PyQtResourceHelper.setStyleSheet([self.__closeBtn], ['style/button.css'])
 
         lbl = QLabel('Recent')
         lbl.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
