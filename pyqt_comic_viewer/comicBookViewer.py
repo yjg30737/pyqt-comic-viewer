@@ -138,7 +138,7 @@ class ComicBookViewer(QMainWindow):
         filenames = os.listdir(dirname)
         if filenames:
             filenames = [os.path.join(dirname, filename) for filename in filenames]
-            self.__comicBookViewerWidget.setFilenames(filenames=filenames)
+            self.__comicBookViewerWidget.setFilenames(filenames=filenames, cur_filename=filename)
             self.__comicBookViewerWidget.setFocus()
 
     def __loadFile(self):
