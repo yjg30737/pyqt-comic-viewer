@@ -191,29 +191,30 @@ class ComicBookViewer(QMainWindow):
             
     def __addBookmark(self):
         filename = self.__comicBookViewerWidget.getCurrentFilename()
-        actions = [action for action in self.__bookmarkMenu.actions()]
-        # check the 'empty action' exists
-        bookmarkEmpty = [action for action in actions if action.text() == 'Nothing To Show']
-        if bookmarkEmpty:
-            self.__bookmarkMenu.removeAction(bookmarkEmpty[0])
-            action = BookmarkAction(filename, self)
-            action.clicked.connect(self.__showBookmarkFile)
-            self.__bookmarkMenu.addAction(action)
+        if filename:
+            actions = [action for action in self.__bookmarkMenu.actions()]
+            # check the 'empty action' exists
+            bookmarkEmpty = [action for action in actions if action.text() == 'Nothing To Show']
+            if bookmarkEmpty:
+                self.__bookmarkMenu.removeAction(bookmarkEmpty[0])
+                action = BookmarkAction(filename, self)
+                action.clicked.connect(self.__showBookmarkFile)
+                self.__bookmarkMenu.addAction(action)
 
-            # check the 'remove action' exists
-            removeAll = [action for action in actions if action.text() == 'Remove All']
-            if removeAll:
-                pass
+                # check the 'remove action' exists
+                removeAll = [action for action in actions if action.text() == 'Remove All']
+                if removeAll:
+                    pass
+                else:
+                    removeAllBookmarksAction = QAction('Remove All', self)
+                    removeAllBookmarksAction.triggered.connect(self.__removeAll)
+                    sep = self.__bookmarkMenu.addSeparator()
+                    sep.setObjectName('removeAllBookmarksActionSeparator')
+                    self.__bookmarkMenu.addAction(removeAllBookmarksAction)
             else:
-                removeAllBookmarksAction = QAction('Remove All', self)
-                removeAllBookmarksAction.triggered.connect(self.__removeAll)
-                sep = self.__bookmarkMenu.addSeparator()
-                sep.setObjectName('removeAllBookmarksActionSeparator')
-                self.__bookmarkMenu.addAction(removeAllBookmarksAction)
-        else:
-            action = BookmarkAction(filename, self)
-            action.clicked.connect(self.__showBookmarkFile)
-            self.__bookmarkMenu.insertAction(actions[2], action)
+                action = BookmarkAction(filename, self)
+                action.clicked.connect(self.__showBookmarkFile)
+                self.__bookmarkMenu.insertAction(actions[2], action)
 
     def __showBookmarkFile(self, action):
         filename = action.text()
