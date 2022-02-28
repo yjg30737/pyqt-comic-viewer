@@ -16,6 +16,7 @@ PyQt Comic Viewer
 * <a href="https://github.com/yjg30737/python-open-filepath-and-select.git">python-open-filepath-and-select</a>
 
 ## Feature
+* Theme of this application is dark-gray.
 * Way to flip the page is as same as pyqt-viewer-widget which has mentioned before.
 * Being able to open the directory which current file belongs to
 * Being able to invert the color to prevent the eye strain
