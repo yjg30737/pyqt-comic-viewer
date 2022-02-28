@@ -2,7 +2,7 @@
 PyQt Comic Viewer
 
 ## Requirements
-* PyQt5 >= 5.8
+* PyQt5 >= 5.15
 
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-comic-viewer.git --upgrade```
