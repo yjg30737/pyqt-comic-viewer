@@ -16,11 +16,11 @@ PyQt Comic Viewer
 * <a href="https://github.com/yjg30737/python-open-filepath-and-select.git">python-open-filepath-and-select</a> - For showing the indicated image file in explorer and selecting it
 
 ## Feature
-* ```ComicBookViewerWidget``` has most features of ```ViewerWidget```.
 * Theme of this application is dark-gray.
-* Being able to open the directory which current file belongs to
-* Being able to invert the color to prevent the eye strain
-* Being able to add certain image to bookmark list, but it won't save so if you restart the software the image you saved as a bookmark will be not there. I will add bookmark save feature using ```QSettings```.
+* ```ComicBookViewerWidget``` has most features of ```ViewerWidget```.
+* Open the directory which current file belongs to
+* Invert the color to prevent the eye strain
+* Add certain image to bookmark list, but it won't save so if you restart the software the image you saved as a bookmark will be not there. I will add bookmark save feature using ```QSettings```.
 
 ## Note
 I still test open compressed file feature so it won't work. Open normal file, directory is working and so far i don't find any problems at those two. There's a couple of other things that won't work properly like recent feature and setting background color. This is very first version of application and i will improve it. Sorry for premature upload.
