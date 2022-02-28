@@ -11,7 +11,7 @@ setup(
     description='PyQt Comic Viewer',
     url='https://github.com/yjg30737/pyqt-comic-viewer.git',
     install_requires=[
-        'PyQt5>=5.8',
+        'PyQt5>=5.15',
         'pyqt-custom-titlebar-window @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-window.git@main',
         'pyqt-dark-gray-theme @ git+https://git@github.com/yjg30737/pyqt-dark-gray-theme.git@main',
         'pyqt-toast @ git+https://git@github.com/yjg30737/pyqt-toast.git@main',
