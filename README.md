@@ -12,12 +12,12 @@ PyQt Comic Viewer
 * <a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a> - For theme
 * <a href="https://github.com/yjg30737/pyqt-toast.git">pyqt-toast</a> - For notify window
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a> - For setting icon
-* <a href="https://github.com/yjg30737/pyqt-viewer-widget.git">pyqt-viewer-widget</a> - Parent class 
+* <a href="https://github.com/yjg30737/pyqt-viewer-widget.git">pyqt-viewer-widget</a> - Package which includes parent class of ```ComicBookViewerWidget```(```ViewerWidget```) 
 * <a href="https://github.com/yjg30737/python-open-filepath-and-select.git">python-open-filepath-and-select</a> - For showing the indicated image file in explorer and selecting it
 
 ## Feature
+* ```ComicBookViewerWidget``` has most features of ```ViewerWidget```.
 * Theme of this application is dark-gray.
-* Way to flip the page is as same as pyqt-viewer-widget which has mentioned before.
 * Being able to open the directory which current file belongs to
 * Being able to invert the color to prevent the eye strain
 * Being able to add certain image to bookmark list, but it won't save so if you restart the software the image you saved as a bookmark will be not there. I will add bookmark save feature using ```QSettings```.
