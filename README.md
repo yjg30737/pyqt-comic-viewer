@@ -8,8 +8,9 @@ PyQt Comic Viewer
 ```pip3 install git+https://github.com/yjg30737/pyqt-comic-viewer.git --upgrade```
 
 ## Included Packages
-* <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a> - For frameless window
-* <a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a> - For theme
+
+* <a href="https://github.com/yjg30737/pyqt-style-setter.git">pyqt-style-setter</a> - For theme
+* <a href="https://github.com/yjg30737/pyqt-custom-titlebar-setter.git">pyqt-custom-titlebar-setter</a> - For frameless window
 * <a href="https://github.com/yjg30737/pyqt-toast.git">pyqt-toast</a> - For notify window
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a> - For setting icon
 * <a href="https://github.com/yjg30737/pyqt-viewer-widget.git">pyqt-viewer-widget</a> - Package which includes parent class of ```ComicBookViewerWidget```(```ViewerWidget```) 
