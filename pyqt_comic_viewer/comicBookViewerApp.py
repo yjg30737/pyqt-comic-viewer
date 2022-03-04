@@ -1,7 +1,4 @@
-import os, sys, inspect
-
-from PyQt5.QtWidgets import QApplication, QPushButton
-from pyqt_custom_titlebar_window import CustomTitlebarWindow
+from PyQt5.QtWidgets import QApplication
 from pyqt_dark_gray_theme.darkGrayTheme import *
 from pyqt_comic_viewer.comicBookViewer import ComicBookViewer
 
