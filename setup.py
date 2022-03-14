@@ -7,7 +7,7 @@ setup(
     author_email='yjg30737@gmail.com',
     license='MIT',
     packages=find_packages(),
-    package_data={'pyqt_comic_viewer.ico': ['book.svg', 'close.png']},
+    package_data={'pyqt_comic_viewer.ico': ['book.svg', 'close.svg']},
     description='PyQt Comic Viewer',
     url='https://github.com/yjg30737/pyqt-comic-viewer.git',
     install_requires=[
