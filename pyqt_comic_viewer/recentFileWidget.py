@@ -52,7 +52,5 @@ class RecentFileWidget(QWidget):
         return super().close()
 
     def __openRecentFile(self, item):
-        if item.text() == '짱 25':
-            path = r'C:\Users\tende\PycharmProjects\Yjg\PyQt\comicBookViewer\짱 25\DARKLiCH-00.jpg'
-            self.openRecentFile.emit(path)
+        pass
 
