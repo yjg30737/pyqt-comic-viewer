@@ -1,7 +1,7 @@
 
-import sys, os
+import os
 from PyQt5.QtGui import QImage, QPixmap
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, \
+from PyQt5.QtWidgets import QMainWindow, QAction, \
     QFileDialog, QColorDialog, QSplitter, QGridLayout, QWidget, QVBoxLayout
 
 from pyqt_comic_viewer.recentFileWidget import RecentFileWidget
@@ -9,8 +9,6 @@ from pyqt_comic_viewer.bookmarkAction import BookmarkAction
 from pyqt_comic_viewer.comicBookViewerWidget import ComicBookViewerWidget
 import zipfile
 from zipfile import ZipFile
-
-from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
 
 class ComicBookViewer(QMainWindow):
