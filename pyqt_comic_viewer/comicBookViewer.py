@@ -63,7 +63,6 @@ class ComicBookViewer(QMainWindow):
         filename = QFileDialog.getOpenFileName(self, 'Set the main background', '', 'Image File (*.jpg *.png *.bmp)')
         if filename[0]:
             filename = filename[0]
-            print(filename)
 
     def __setMenuBar(self):
         menubar = self.menuBar()
