@@ -80,9 +80,9 @@ class ComicBookViewerWidget(ViewerWidget):
             img = p.toImage()
             img.invertPixels()
             p.convertFromImage(img)
-            self._graphicsView.setPixmap(p)
+            self._view.setPixmap(p)
         else:
-            self._graphicsView.setFilename(filename)
+            self._view.setFilename(filename)
 
     def __addBookmark(self):
         self.addBookmark.emit()
