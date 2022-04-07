@@ -22,6 +22,7 @@ class ComicBookViewerWidget(ViewerWidget):
     def __initUi(self):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__prepare_menu)
+        self.setExtensionsExceptForImage(['.bmp', '.jpg', '.jpeg', '.gif', '.png'])
 
     def __prepare_menu(self, pos):
         menu = QMenu(self)
