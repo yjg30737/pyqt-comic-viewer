@@ -24,6 +24,8 @@ class ComicBookViewer(QMainWindow):
 
         self.__comicBookViewerWidget = ComicBookViewerWidget()
         self.__comicBookViewerWidget.addBookmark.connect(self.__addBookmark)
+        self.__comicBookViewerWidget.setExtensions(['.bmp', '.jpg', '.jpeg', '.gif', '.png'])
+        self.__comicBookViewerWidget.setWindowTitleBasedOnCurrentFileEnabled(True, self.windowTitle())
 
         self.__leftWidget = RecentFileWidget()
         self.__leftWidget.openRecentFile.connect(self.__loadImage)
