@@ -16,6 +16,7 @@ PyQt Comic Viewer
 * <a href="https://github.com/yjg30737/pyqt-viewer-widget.git">pyqt-viewer-widget</a> - Package which includes parent class of ```ComicBookViewerWidget```(```ViewerWidget```) 
 * <a href="https://github.com/yjg30737/python-open-filepath-and-select.git">python-open-filepath-and-select</a> - For showing the indicated image file in explorer and selecting it
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
+* <a href="https://github.com/yjg30737/pyqt-get-selected-filter.git">pyqt-get-selected-filter</a>
 
 ## Feature
 * Theme of this application is dark-gray.
