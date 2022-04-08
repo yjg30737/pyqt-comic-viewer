@@ -5,3 +5,4 @@ git+https://git@github.com/yjg30737/pyqt-viewer-widget.git@main
 git+https://git@github.com/yjg30737/python-open-filepath-and-select.git@main
 git+https://git@github.com/yjg30737/pyqt-svg-icon-pushbutton.git@main
 git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main
+git+https://git@github.com/yjg30737/pyqt-get-selected-filter.git@main

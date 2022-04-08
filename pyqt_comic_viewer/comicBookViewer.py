@@ -1,4 +1,3 @@
-
 import os
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QMainWindow, QAction, \
@@ -7,6 +6,9 @@ from PyQt5.QtWidgets import QMainWindow, QAction, \
 from pyqt_comic_viewer.recentFileWidget import RecentFileWidget
 from pyqt_comic_viewer.bookmarkAction import BookmarkAction
 from pyqt_comic_viewer.comicBookViewerWidget import ComicBookViewerWidget
+
+from pyqt_get_selected_filter import getSelectedFilter
+
 import zipfile
 from zipfile import ZipFile
 
@@ -15,16 +17,19 @@ class ComicBookViewer(QMainWindow):
 
     def __init__(self):
         super().__init__()
+        self.__initVal()
         self.__initUi()
 
-    def __initUi(self):
-        title = 'Comic Viewer'
+    def __initVal(self):
+        self.__title = 'Comic Viewer'
+        self.__extensions = ['.bmp', '.jpg', '.jpeg', '.gif', '.png']
 
-        self.setWindowTitle(title)
+    def __initUi(self):
+        self.setWindowTitle(self.__title)
 
         self.__comicBookViewerWidget = ComicBookViewerWidget()
         self.__comicBookViewerWidget.addBookmark.connect(self.__addBookmark)
-        self.__comicBookViewerWidget.setExtensions(['.bmp', '.jpg', '.jpeg', '.gif', '.png'])
+        self.__comicBookViewerWidget.setExtensions(self.__extensions)
         self.__comicBookViewerWidget.setWindowTitleBasedOnCurrentFileEnabled(True, self.windowTitle())
 
         self.__leftWidget = RecentFileWidget()
@@ -33,7 +38,7 @@ class ComicBookViewer(QMainWindow):
         lay = QVBoxLayout()
         lay.addWidget(self.__comicBookViewerWidget)
         lay.setContentsMargins(0, 0, 0, 0)
-        
+
         rightWidget = QWidget()
         rightWidget.setLayout(lay)
 
@@ -47,7 +52,7 @@ class ComicBookViewer(QMainWindow):
         lay = QGridLayout()
         lay.addWidget(mainSplitter)
         lay.setContentsMargins(0, 0, 0, 0)
-        
+
         mainWidget = QWidget()
         mainWidget.setLayout(lay)
 
@@ -59,7 +64,7 @@ class ComicBookViewer(QMainWindow):
 
     def __backgroundColorSettings(self):
         color = QColorDialog.getColor()
-        self.__comicBookViewerWidget.setStyleSheet("QGraphicsView { background: "+color.name() + "}")
+        self.__comicBookViewerWidget.setStyleSheet("QGraphicsView { background: " + color.name() + "}")
 
     def __mainBackgroundSettings(self):
         filename = QFileDialog.getOpenFileName(self, 'Set the main background', '', 'Image File (*.jpg *.png *.bmp)')
@@ -95,7 +100,7 @@ class ComicBookViewer(QMainWindow):
         self.__bottomWidgetToggledAction.setCheckable(True)
         self.__bottomWidgetToggledAction.setChecked(False)
         self.__bottomWidgetToggledAction.toggled.connect(self.__bottomWidgetToggled)
-        
+
         self.__recentFileToggleAction = QAction('Show Recent Window', self)
         self.__recentFileToggleAction.setCheckable(True)
         self.__recentFileToggleAction.setChecked(True)
@@ -108,7 +113,7 @@ class ComicBookViewer(QMainWindow):
         self.__showFullScreenAction.setCheckable(True)
         self.__showFullScreenAction.setChecked(False)
         self.__showFullScreenAction.toggled.connect(self.__showFullScreenToggled)
-        
+
         viewMenu.addAction(self.__bottomWidgetToggledAction)
         viewMenu.addAction(self.__recentFileToggleAction)
         viewMenu.addAction(self.__showFullScreenAction)
@@ -139,7 +144,8 @@ class ComicBookViewer(QMainWindow):
             self.__comicBookViewerWidget.setFocus()
 
     def __loadFile(self):
-        filename = QFileDialog.getOpenFileName(self, 'Open File', '', 'Image File (*.jpg *.bmp *.png)')
+        filename = QFileDialog.getOpenFileName(self, 'Open File', '',
+                                               f'Image File {getSelectedFilter(self.__extensions)}')
         if filename[0]:
             filename = filename[0]
             filename = os.path.dirname(filename) + '\\' + os.path.basename(filename)
@@ -165,7 +171,7 @@ class ComicBookViewer(QMainWindow):
         dirname = QFileDialog.getExistingDirectory(None, 'Open Directory', '', QFileDialog.ShowDirsOnly)
         if dirname:
             self.__loadImage(dirname)
-            
+
     def __bottomWidgetToggled(self, flag: bool):
         self.__comicBookViewerWidget.setBottomWidgetVisible(flag)
 
@@ -185,7 +191,7 @@ class ComicBookViewer(QMainWindow):
         self.__bookmarkMenu.addAction(addBookmarkAction)
         self.__bookmarkMenu.addSeparator()
         self.__bookmarkMenu.addAction(bookmarkEmpty)
-            
+
     def __addBookmark(self):
         filename = self.__comicBookViewerWidget.getCurrentFilename()
         if filename:
