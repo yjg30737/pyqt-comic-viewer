@@ -1,7 +1,8 @@
 from PyQt5.QtCore import pyqtSignal, Qt
-from PyQt5.QtWidgets import QWidget, QListWidget, QPushButton, QHBoxLayout, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QListWidget, QHBoxLayout, QLabel, QVBoxLayout
 
 from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
+from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
 
 class RecentFileWidget(QWidget):
@@ -17,7 +18,7 @@ class RecentFileWidget(QWidget):
 
         self.__saveWidget = QListWidget()
         self.__saveWidget.itemDoubleClicked.connect(self.__openRecentFile)
-        self.__saveWidget.setStyleSheet('QListWidget { border: none; }')
+        self.__saveWidget.setObjectName('topWidgetListWidget')
 
         self.__closeBtn = SvgIconPushButton(self)
         self.__closeBtn.clicked.connect(self.close)
@@ -26,7 +27,7 @@ class RecentFileWidget(QWidget):
 
         lbl = QLabel('Recent')
         lbl.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        lbl.setStyleSheet('QLabel { padding: 1px; }')
+        lbl.setObjectName('topWidgetLabel')
 
         lay = QHBoxLayout()
         lay.addWidget(lbl)
@@ -45,7 +46,7 @@ class RecentFileWidget(QWidget):
 
         self.setLayout(lay)
 
-        self.setStyleSheet('QWidget#topWidget { background-color: #222; padding: 5; border-bottom: 1px solid #555; }')
+        PyQtResourceHelper.setStyleSheet([self], ['style/recent_file_widget.css'])
 
     def close(self):
         self.closeSignal.emit(False)

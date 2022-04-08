@@ -1,0 +1,3 @@
+QWidget#topWidget { background-color: #222; padding: 5; border-bottom: 1px solid #555; }
+QListWidget#topWidgetListWidget { border: none; }
+QLabel#topWidgetLabel { padding: 1px; }
