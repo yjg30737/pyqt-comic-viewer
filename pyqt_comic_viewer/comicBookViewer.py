@@ -79,13 +79,14 @@ class ComicBookViewer(QMainWindow):
         homeAction.triggered.connect(self.__goHome)
 
         openFileAction = QAction('&Open File', self)
+        openFileAction.setShortcut('Ctrl+O')
         openFileAction.triggered.connect(self.__loadFile)
 
         openZipFileAction = QAction('&Open Compressed File', self)
         openZipFileAction.triggered.connect(self.__loadZipFile)
 
         openDirAction = QAction('&Open Directory', self)
-        openDirAction.setShortcut('Ctrl+O')
+        openDirAction.setShortcut('Ctrl+Shift+O')
         openDirAction.triggered.connect(self.__loadDir)
 
         fileMenu.addAction(homeAction)
