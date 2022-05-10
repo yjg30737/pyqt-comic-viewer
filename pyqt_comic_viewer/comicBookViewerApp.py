@@ -10,5 +10,5 @@ class ComicBookViewerApp(QApplication):
         super().__init__(*args, **kwargs)
         mainWindow = ComicBookViewer()
         StyleSetter.setWindowStyle(mainWindow)
-        self.__titleBarWindow = CustomTitlebarSetter.getCustomTitleBar(mainWindow, icon_filename='ico/book.svg')
+        self.__titleBarWindow = CustomTitlebarSetter.getCustomTitleBarWindow(mainWindow, icon_filename='ico/book.svg')
         self.__titleBarWindow.show()
