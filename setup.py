@@ -9,7 +9,7 @@ setup(
     packages=find_packages(),
     package_data={'pyqt_comic_viewer.ico': ['book.svg', 'close.svg'],
                   'pyqt_comic_viewer.style': ['recent_file_widget.css']},
-    description='PyQt Comic Viewer',
+    description='PyQt comic viewer',
     url='https://github.com/yjg30737/pyqt-comic-viewer.git',
     install_requires=[
         'PyQt5>=5.15',
