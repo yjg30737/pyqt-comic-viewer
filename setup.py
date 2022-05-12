@@ -13,13 +13,12 @@ setup(
     url='https://github.com/yjg30737/pyqt-comic-viewer.git',
     install_requires=[
         'PyQt5>=5.15',
-        'pyqt-style-setter @ git+https://git@github.com/yjg30737/pyqt-style-setter.git@main',
-        'pyqt-custom-titlebar-setter @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-setter.git@main',
-        'pyqt-toast @ git+https://git@github.com/yjg30737/pyqt-toast.git@main',
-        'pyqt-viewer-widget @ git+https://git@github.com/yjg30737/pyqt-viewer-widget.git@main',
+        'pyqt-style-setter>=0.0.1',
+        'pyqt-custom-titlebar-setter>=0.0.1',
+        'pyqt-viewer-widget>=0.0.1',
         'python-open-filepath-and-select @ git+https://git@github.com/yjg30737/python-open-filepath-and-select.git@main',
-        'pyqt-svg-icon-pushbutton @ git+https://git@github.com/yjg30737/pyqt-svg-icon-pushbutton.git@main',
-        'pyqt-resource-helper @ git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main',
+        'pyqt-svg-icon-pushbutton>=0.0.1',
+        'pyqt-resource-helper>=0.0.1',
         'pyqt-get-selected-filter @ git+https://git@github.com/yjg30737/pyqt-get-selected-filter.git@main'
     ]
 )
