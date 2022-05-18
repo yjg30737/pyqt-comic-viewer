@@ -1,7 +1,7 @@
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QWidget, QListWidget, QHBoxLayout, QLabel, QVBoxLayout
 
-from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
+from pyqt_svg_button import SvgButton
 from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
 
@@ -20,7 +20,7 @@ class RecentFileWidget(QWidget):
         self.__saveWidget.itemDoubleClicked.connect(self.__openRecentFile)
         self.__saveWidget.setObjectName('topWidgetListWidget')
 
-        self.__closeBtn = SvgIconPushButton(self)
+        self.__closeBtn = SvgButton(self)
         self.__closeBtn.clicked.connect(self.close)
         self.__closeBtn.setToolTip('Close the file list')
         self.__closeBtn.setIcon('ico/close.svg')

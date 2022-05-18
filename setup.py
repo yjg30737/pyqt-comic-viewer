@@ -17,7 +17,7 @@ setup(
         'pyqt-custom-titlebar-setter>=0.0.1',
         'pyqt-viewer-widget>=0.0.1',
         'python-open-filepath-and-select @ git+https://git@github.com/yjg30737/python-open-filepath-and-select.git@main',
-        'pyqt-svg-icon-pushbutton>=0.0.1',
+        'pyqt-svg-button>=0.0.1',
         'pyqt-resource-helper>=0.0.1',
         'pyqt-get-selected-filter @ git+https://git@github.com/yjg30737/pyqt-get-selected-filter.git@main'
     ]
