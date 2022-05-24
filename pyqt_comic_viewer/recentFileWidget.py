@@ -24,6 +24,7 @@ class RecentFileWidget(QWidget):
         self.__closeBtn.clicked.connect(self.close)
         self.__closeBtn.setToolTip('Close the file list')
         self.__closeBtn.setIcon('ico/close.svg')
+        self.__closeBtn.setFixedSize(self.__closeBtn.sizeHint())
 
         lbl = QLabel('Recent')
         lbl.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
