@@ -1,7 +1,6 @@
 from PyQt5.QtGui import QColor, QPixmap
 from PyQt5.QtWidgets import QMenu, QAction, QColorDialog
 from PyQt5.QtCore import Qt, pyqtSignal, QPoint, QRect
-from pyqt_resource_helper import PyQtResourceHelper
 
 from python_open_filepath_and_select.openFilePathAndSelect import *
 from pyqt_viewer_widget import ViewerWidget
