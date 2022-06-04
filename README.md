@@ -41,13 +41,7 @@ if __name__ == "__main__":
 
 Result
 
-Home page (Image)
+![image](https://user-images.githubusercontent.com/55078043/172029043-08b24354-2f09-44cb-a529-07c36f680309.png)
 
-![image](https://user-images.githubusercontent.com/55078043/156106947-f21b4457-b422-4232-aac1-d8d19cc268c8.png)
-
-Navigation (Video)
-
-https://user-images.githubusercontent.com/55078043/152635333-a47fd3ad-b424-43b7-96d8-7fd1799437f3.mp4
-
-The comic pages being used for example are from Dragonball Multiverse.
+The comic page being used for example is from Dragonball Multiverse.
 
