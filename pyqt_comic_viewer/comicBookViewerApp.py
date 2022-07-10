@@ -1,3 +1,5 @@
+import os
+
 from PyQt5.QtWidgets import QApplication
 from pyqt_comic_viewer.comicBookViewer import ComicBookViewer
 
@@ -10,5 +12,6 @@ class ComicBookViewerApp(QApplication):
         super().__init__(*args, **kwargs)
         mainWindow = ComicBookViewer()
         StyleSetter.setWindowStyle(mainWindow)
-        self.__titleBarWindow = CustomTitlebarSetter.getCustomTitleBarWindow(mainWindow, icon_filename='ico/book.svg')
+        icon_filename = os.path.join(os.path.dirname(__file__), 'ico/book.svg')
+        self.__titleBarWindow = CustomTitlebarSetter.getCustomTitleBarWindow(mainWindow, icon_filename=icon_filename)
         self.__titleBarWindow.show()
